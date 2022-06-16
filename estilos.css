@@ -1,7 +1,8 @@
+/* HEADER  002B5E    00AC82*/
 header {
 	width:100%; /* Establecemos que el header abarque el 100% del documento */
 	overflow:hidden; /* Eliminamos errores de float */
-	background:#00AC82;
+	background:#002B5E;
 	margin-bottom:20px;
     height: 150px;
 }
@@ -15,7 +16,7 @@ header {
 }
 
 header .logo {
-	color:#f2f2f2;
+	color:black;
 	font-size:50px;
 	line-height:200px;
 	float:left;
@@ -32,7 +33,7 @@ header nav {
 
 header nav a {
 	display:inline-block;
-	color:black;
+	color:#f2f2f2;
 	text-decoration:none;
 	padding:10px 20px;
 	line-height:normal;
@@ -44,11 +45,11 @@ header nav a {
 }
 
 header nav a:hover {
-	background:#002B5E;
+	background:#00AC82;
 	border-radius:50px;
     color: #f2f2f2;
 }
-
+/* tarjeta con imagen */
 .card{
 	position: relative;
 	width: 250px;
