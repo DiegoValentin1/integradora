@@ -104,3 +104,16 @@ header nav a:hover {
 	transition-delay: .25s;
 	width: 80%;
 }
+
+
+::-webkit-scrollbar{
+	width: 17px;
+}
+
+::-webkit-scrollbar-track{
+	background: #dddddd;
+}
+
+::-webkit-scrollbar-thumb{
+	background: #00AC82;
+}
