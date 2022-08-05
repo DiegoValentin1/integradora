@@ -1,0 +1,177 @@
+
+<html lang="en">
+<head>
+    <title>Tienda Utez</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos_Busquedas_Gen.css">
+    
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Uso de jquery -->
+    <script src="JS/jquery-3.6.0.js"></script>
+    <!-- llamando a js -->
+    <script src="JS/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col" style="padding: 0;">
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #002B5E;">
+                <div class="container-fluid" style="text-align: left;">
+                    <div class="col-2">
+                        <a class="navbar-brand" href="#" style="color: white;">SEAU UTEZ</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <div class=" col-8" id="navbarSupportedContent" >
+                        <form class="d-flex" style="margin-bottom: 0px;">
+                            <input class="form-control me-2" style="width: 100%; margin: 0;" type="search" placeholder="Pantalon azul" aria-label="Search">
+                            <button class="btn btn-outline-success" style="background-color: #00AC82;"; type="submit">Buscar</button>
+                        </form>
+                    </div>
+                    <div class="bg-dark col-2">
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Estructura correcta -->
+    <div class="row">
+        <h1>Todas los Articulos</h1>
+        <!-- Barra de Filtrado de la busqueda -->
+        <div class="col-2">
+            <div class="Category-list">
+                <h6>FILTRAR POR:</h6>
+                <a href="#" class="Category_item" category="all" >Todo</a>
+                <a href="#" class="Category_item" category="playeras" >Playeras</a>
+                <a href="#" class="Category_item" category="sudaderas" >Sudaderas</a>
+                <a href="#" class="Category_item" category="pantalones" >Pantalon</a>
+                <a href="#" class="Category_item" category="accesorios" >Accesorios</a>
+            </div>
+        </div>
+        <!-- Productos -->
+        <div class="col-10">
+            <section class="Products-list">
+                <article class="card" category="playeras">
+                    <div class="card_content ">
+                        <h6 class="card_title">
+                            <a href="http://www.utez.edu.mx/">Playera Negra</a>
+                        </h6>
+                        <span class="card_subtitle"></span>
+                        <p class="card_description">Este producto esta realizado con materiales reciclados</p>
+                    </div>
+                </article>
+
+                <article class="card" category="playeras">
+                    <div class="card_content">
+                        <h6 class="card_title">
+                            <a href="#">Playera Roja</a>
+                        </h6>
+                        <span class="card_subtitle"></span>
+                        <p class="card_description">Este producto esta realizado con materiales reciclados</p>
+                    </div>
+                </article>
+                <article class="card" category="sudaderas">
+                    <div class="card_content">
+                        <h6 class="card_title">
+                            <a href="#">Sudadera Blanca</a>
+                        </h6>
+                        <span class="card_subtitle"></span>
+                        <p class="card_description">Este producto esta realizado con materiales reciclados</p>
+                    </div>
+                </article>
+                <article class="card" category="sudaderas">
+                    <div class="card_content">
+                        <h6 class="card_title">
+                            <a href="#">Sudadera Negra</a>
+                        </h6>
+                        <span class="card_subtitle"></span>
+                        <p class="card_description">Este producto esta realizado con materiales reciclados</p>
+                    </div>
+                </article>
+                <article class="card" category="pantalones">
+                    <div class="card_content">
+                        <h6 class="card_title">
+                            <a href="#">Pantalon negro de Mujer</a>
+                        </h6>
+                        <span class="card_subtitle"></span>
+                        <p class="card_description">Este producto esta realizado con materiales reciclados</p>
+                    </div>
+                </article>
+                <article class="card" category="pantalones">
+                    <div class="card_content">
+                        <h6 class="card_title">
+                            <a href="#">Pantalon Azul</a>
+                        </h6>
+                        <span class="card_subtitle"></span>
+                        <p class="card_description">Este producto esta realizado con materiales reciclados</p>
+                    </div>
+                </article>
+                <article class="card" category="pantalones">
+                    <div class="card_content">
+                        <h6 class="card_title">
+                            <a href="#">Short Negro </a>
+                        </h6>
+                        <span class="card_subtitle"></span>
+                        <p class="card_description">Este producto esta realizado con materiales reciclados</p>
+                    </div>
+                </article>
+                <article class="card" category="accesorios">
+                    <div class="card_content">
+                        <h6 class="card_title">
+                            <a href="#">Taza</a>
+                        </h6>
+                        <span class="card_subtitle"></span>
+                        <p class="card_description">Este producto esta realizado con materiales reciclados</p>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </div>
+
+
+</div>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+
+<script>
+    //Filtro
+    $(document).ready(function(){
+        //agregamos la clase active al primer enlace
+        $('.Category-list .Category-item[category="all"]').addClass('ct_item-active');
+
+        //funcion para que al dar clik se filtren los articulos
+        $('.Category_item').click(function(){
+            var catProduct = $(this).attr('category');
+            console.log(catProduct);
+
+            //agregamos la clase active al enlace que seleccionamos
+            $('.Category_item').removeClass('ct_item-active');
+            $(this).addClass('ct_item-active');
+
+            //Filtrar los articulos. se ocultan los demas productos xd
+            $('.card').css('transform', 'scale(0)');
+            function hideProduct(){
+                $('.card').hide();
+            } setTimeout(hideProduct,400);
+
+            //mostrar los productos
+            function showProduct(){
+                $('.card[category="'+catProduct+'"]').css('transform', 'scale(1)');
+                $('.card[category="'+catProduct+'"]').show();
+            } setTimeout(showProduct,400);
+
+        });
+
+        //mostear todos los productos
+        $('.Category_item[category="all"]').click(function(){
+            function showAll(){
+                $('.card').show();
+                $('.card').css('transform', 'scale(1)');
+            } setTimeout(showAll,400);
+        });
+    });
+</script>
+</body>
+</html>

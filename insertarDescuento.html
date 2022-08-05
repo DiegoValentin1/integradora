@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Login</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid"; >
+        <div class="row" style="background-color: #002B5E;">
+            <div class="">
+                <nav class="navbar navbar-expand-lg navbar-light" >
+                    <div class="container-fluid" style="text-align: left;">
+                    <div class="col-2">
+                    <a class="navbar-brand" href="#" style="color: white;">Tienda Utez</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    </div>
+    
+
+                    </div>
+                </nav>
+            </div>        
+        </div>
+        
+          <!--Empieza el mero Insertar Stock  -->
+          
+          <div class="row mt-3">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header"><h3 class="text-center">REGISTRO DE DESCUENTO</h3>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <form action="add-pokemon" method="post" novalidate class="needs-validation">
+                                        <div class="form-group mb-3">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <label for="min">Fecha Inicio</label>
+                                                    <input type="date"  id="min" name="fecha_inicio" class="form-control min-today"
+                                                           required data-date-split-input="true"/>
+                                                    <div class="invalid-feedback">
+    
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <label for="weight">Porcentaje Descuento</label>
+                                                    <input type="number" min="0" max="100"  id="weight" name="por_descuento" class="form-control"
+                                                           required/>
+                                                    <div class="invalid-feedback">
+    
+                                                    </div>
+                                                </div>
+    
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <label for="min2">Fecha Fin</label>
+                                                    <input type="date"  id="min2" name="fecha_fin" class="form-control min-today"
+                                                           required data-date-split-input="true"/>
+                                                    <div class="invalid-feedback">
+    
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <label for="height">ID Stock</label>
+                                                    <input type="number" id="height" name="fk_stock2" class="form-control"
+                                                           required/>
+                                                    <div class="invalid-feedback">
+    
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-3 text-end">
+                                            <button type="reset" class="btn btn-danger btn-sm">
+                                                Cancelar
+                                            </button>
+                                            <button type="submit" class="btn btn-success btn-sm">
+                                                Guardar
+                                            </button>
+                                        </div>
+                                    </form>
+    
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+
+                                <div class="col-3 mx-2">
+                                    <table class="table">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Articulo</th>
+                                            <th scope="col"></th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td><button onclick=""><i data-feather="arrow-right"></i></button></td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">2</th>
+                                            <td>Jacob</td>
+                                            <td><button onclick=""><i data-feather="arrow-right"></i></button></td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">3</th>
+                                            <td >Larry</td>
+                                            <td><button onclick=""><i data-feather="arrow-right"></i></button></td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+
+                                <div class="col-3 mx-2">
+                                    <table class="table" >
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Articulo</th>
+                                            <th scope="col"></th>
+                                          </tr>
+                                        </thead>
+                                        <tbody id="tabla2">
+                                          <tr>
+                                            <td><button onclick=""><i data-feather="arrow-left"></i></button></td>
+                                            <td>Mark</td>
+                                            <th scope="row">1</th>                                           
+                                          </tr>
+                                          <tr>
+                                            <td><button onclick=""><i data-feather="arrow-left"></i></button></td>
+                                            <td>Jacob</td>                                          
+                                            <th scope="row">2</th>                                        
+                                          </tr>
+                                          <tr>
+                                            <td><button onclick=""><i data-feather="arrow-left"></i></button></td>
+                                            <td >Larry</td>
+                                            <th scope="row">3</th>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <div class="row justify-content-center">
+            <div class="col-6">
+                <form action="">
+                    <input type="checkbox" name="">
+                </form>
+            </div>
+          </div>
+    </div>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        feather.replace()
+        (function () {
+            'use strict'
+    
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+    
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+    
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+        document.getElementById('min').min = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().split("T")[0];
+        document.getElementById('min2').min = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().split("T")[0];
+
+        var table = document.getElementById("tabla1");
+        var tbody = table.getElementsByTagName("tbody")[0];
+        tbody.onclick = function (e) {
+            e = e || window.event;
+            var data = [];
+            var target = e.srcElement || e.target;
+            while (target && target.nodeName !== "TR") {
+                target = target.parentNode;
+            }
+            if (target) {
+                var cells = target.getElementsByTagName("td");
+                for (var i = 0; i < cells.length; i++) {
+                    data.push(cells[i].innerHTML);
+                }
+            }
+            var trnode = document.createElement("tr");
+          
+            for(var i = 0; i < data.length; i++){
+                var tdnode = document.createElement("td");
+                var textnode = document.createTextNode(data[i]);
+                tdnode.appendChild(textnode);
+                trnode.appendChild(tdnode);
+            }
+          
+            document.getElementById("tabla2").appendChild(trnode);
+            alert(data);
+    };
+    </script>    
+</body>
+</html>

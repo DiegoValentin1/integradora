@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Login</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid";>
+        <div class="row" style="background-color: #002B5E;">
+            <div class="">
+                <nav class="navbar navbar-expand-lg navbar-light" >
+                    <div class="container-fluid" style="text-align: left;">
+                    <div class="col-2">
+                    <a class="navbar-brand" href="#" style="color: white;">Tienda Utez</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    </div>
+                    
+                    
+                    </div>
+                </nav>
+            </div>        
+        </div>
+        
+          <!--Empieza la pantalla de admin pai  -->
+          <!-- ARTICULOS -->
+        <div class="row my-3">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-6">
+                                ARTICULOS
+                            </div>
+                            <div class="col-6 text-end">
+                                <a href="" class="btn btn-outline-primary">INSERT</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-sm table-hover">
+                            <thead>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Descripción Corta</th>
+                            <th>Descripción Larga</th>
+                            <th>Categoria</th>
+                            <th>Imagen URL</th>
+                            <th>Modificar</th>
+                            <th>Eliminar</th>
+                            </thead>
+                            <tbody>
+                            <c:forEach var="pokemon" items="${pokemons}" varStatus="status">
+                                <tr>
+                                    <td>
+                                        <c:out value="${status.count}"/>
+                                    </td>
+                                    <td>
+                                        <c:out value="${pokemon.name}"/>
+                                    </td>
+                                    <td>
+                                        <c:out value="${pokemon.health}"/>
+                                    </td>
+                                    <td>
+                                        <c:out value="${pokemon.power}"/>
+                                    </td>
+                                    <td>
+                                        <c:out value="${pokemon.weight}"/>
+                                    </td>
+                                    <td>
+                                        <c:out value="${pokemon.height}"/>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn btn-warning">MODIFY</a>
+                                    </td>
+                                    <td>
+                                        <form action="delArt" method="post" onsubmit="javascript: return Validar();">
+                                            <input type="hidden" name="ID" value="${articulo.ID}">
+                                            <button class="btn btn-danger">DELETE</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            </c:forEach>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <!-- STOCK -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-6">
+                                STOCK
+                            </div>
+                            <div class="col-6 text-end">
+                                <a href="" class="btn btn-outline-primary">INSERT</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-sm table-hover">
+                            <thead>
+                            <th>ID</th>
+                            <th>Talla</th>
+                            <th>Color</th>
+                            <th>Stock</th>
+                            <th>Precio</th>
+                            <th>Articulo ID</th>
+                            <th>Imagen URL</th>
+                            <th>Modificar</th>
+                            <th>Eliminar</th>
+                            </thead>
+                            <tbody>
+                            <c:forEach var="pokemon" items="${pokemons}" varStatus="status">
+                                <tr>
+                                    <td>
+                                        <c:out value="${status.count}"/>
+                                    </td>
+                                    <td>
+                                        <c:out value="${pokemon.name}"/>
+                                    </td>
+                                    <td>
+                                        <c:out value="${pokemon.health}"/>
+                                    </td>
+                                    <td>
+                                        <c:out value="${pokemon.power}"/>
+                                    </td>
+                                    <td>
+                                        <c:out value="${pokemon.weight}"/>
+                                    </td>
+                                    <td>
+                                        <c:out value="${pokemon.height}"/>
+                                    </td>
+                                    <td>
+                                        <c:out value="${pokemon.pokemonType}"/>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn btn-warning">MODIFY</a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn btn-danger">DELETE</a>
+                                    </td>
+                                </tr>
+                            </c:forEach>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- DESCUENTO -->
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-6">
+                                DESCUENTOS
+                            </div>
+                            <div class="col-6 text-end">
+                                <a href="" class="btn btn-outline-primary">INSERT</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-sm table-hover">
+                            <thead>
+                            <th>ID</th>
+                            <th>Fecha de Fin</th>
+                            <th>Porcentaje de Descuento</th>
+                            <th>ID Articulo en Stock</th>
+                            <th>Modificar</th>
+                            <th>Eliminar</th>
+                            </thead>
+                            <tbody>
+                            <c:forEach var="pokemon" items="${pokemons}" varStatus="status">
+                                <tr>
+                                    <td>
+                                        <c:out value="${status.count}"/>
+                                    </td>
+                                    <td>
+                                        <c:out value="${pokemon.name}"/>
+                                    </td>
+                                    <td>
+                                        <c:out value="${pokemon.health}"/>
+                                    </td>
+                                    <td>
+                                        <c:out value="${pokemon.power}"/>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn btn-warning">MODIFY</a>
+                                    </td>
+                                    <td>
+                                        <a href="" class="btn btn-danger">DELETE</a>
+                                    </td>
+                                </tr>
+                            </c:forEach>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+          
+    </div>
+    <script>
+        function Validar()
+        {
+        if (confirm('¿Esta seguro de eliminar?')) {
+            return true;
+        } else {
+            return false;
+        }
+        }
+    </script>    
+</body>
+</html>
